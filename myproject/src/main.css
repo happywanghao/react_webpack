@@ -1,0 +1,74 @@
+body{
+  font-size: 14px;
+}
+.my-wrap{
+  display: flex;
+  /*有两个轴,主轴默认横横排  项目沿着主轴排列
+  项目会充满副轴的高度
+  默认把横轴填充满*/
+  height:100vh;
+  flex-direction: column ;
+}
+@media (min-width:700px){
+  .my-wrap{
+    flex-direction:row;
+  }
+}
+header,footer{
+  height:80px;
+  background: #00bcd4;
+  flex-shrink: 0;
+  display: flex;
+}
+header{
+  justify-content:space-between;
+  padding: 0 10px;
+  align-items:center;
+  color:#fff;
+}
+.main{
+  flex-grow: 1;
+  overflow-y: auto;
+  display: flex;
+}
+.main>div{
+  flex-grow: 1;
+}
+.active{
+  color:red;
+}
+footer{
+  justify-content:space-around;
+  align-content:center;
+  align-items:center;
+  text-align: center;
+}
+footer a{
+  flex-basis:25%;
+  font-size: 18px;
+  color: #fff;
+  border-right: 1px solid #fff;
+  text-decoration: none;
+}
+footer a:hover{
+  color:red;
+  text-decoration: none;
+}
+footer a:active{
+  text-decoration: none;
+}
+footer a:focus{
+  text-decoration: none;
+}
+.home-wrap{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: url('https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1495020775389&di=9be92820588afac9bbb9bc55e3bfb243&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F01795b57ecd297a84a0d304f2aa828.gif') no-repeat 0 center;
+  background-size: cover;
+}
+.left-nav{
+  width: 200px;
+  background: #00bcd4;
+}

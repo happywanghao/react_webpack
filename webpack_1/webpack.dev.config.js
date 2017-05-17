@@ -5,14 +5,15 @@ const OpenBrowserPlugin = require('open-browser-webpack-plugin')
 module.exports = {
   entry: './src/index.js',//应用层序从这里执行
   output: {
-    path:path.resolve(__dirname,"build"),//出口文件
-    filename: "bundle[hash:5].js",//出口文件名
+    // path:path.resolve(__dirname,"build"),//出口文件
+    filename: "bundle.js",//出口文件名
+    publicPath:'/'
   },
   devServer: {
     // contentBase: path.join(__dirname, "build"),//这个文件夹下的东西localhost:3000就能拿到
     compress: true,
     port: 3000,//指定端口
-    historyApiFallback: true,//所有404都返回index.html
+    historyApiFallback: true//所有404都返回index.html
 
   },
   devtool: "source-map",//把错误信息指向源代码
